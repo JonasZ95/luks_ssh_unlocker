@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# shellcheck source=ssh_unlock_config
+source ssh_unlock_config
+
+if [[ ! -f $KEY_FILE ]] ; then
+    echo "off"
+    exit 1
+fi
+
+
+nc -z "$HOST" "$PORT" -w 5 \
+    &> /dev/null \
+    || { echo "off"; exit 1;}
+    
+echo "on"

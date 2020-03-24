@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# shellcheck source=ssh_unlock_config
+source ssh_unlock_config
+
+if [[ ! -f $KEY_FILE ]] ; then
+    echo "Key file missing"
+    exit 1
+fi
+
+while [ "$DISK_COUNT" -gt 0 ]; 
+do 
+    ssh jonservzen_luks cryptroot-unlock < "$KEY_FILE"
+    DISK_COUNT=$(("$DISK_COUNT"-1))
+done
