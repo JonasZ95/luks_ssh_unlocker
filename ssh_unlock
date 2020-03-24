@@ -1,7 +1,9 @@
 #!/bin/bash
 
+script_dir="$(dirname "$0")"
+
 # shellcheck source=ssh_unlock_config
-source ssh_unlock_config
+source "$script_dir/ssh_unlock_config"
 
 if [[ ! -f $KEY_FILE ]] ; then
     echo "Key file missing"
