@@ -1,6 +1,6 @@
 # Luks SSH Unlocker
 
-The key idea is to use HomeAssistant to check whether a server needs to be unlocked and a key file from a usb stick exists by using **autousb** to automount an inserted usb drive. 
+The key idea is to use HomeAssistant to check whether a server needs to be unlocked and a key file from a usb stick exists by using **usbmount** to automount an inserted usb drive. 
 
 There are two components:
 
