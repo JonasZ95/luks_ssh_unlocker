@@ -2,6 +2,6 @@
 
 export HOST_ALIAS='jonservzen_luks'
 export HOST='jonservzen'
-export PORT='5423'
+export PORT=5423
 export DISK_COUNT=2
 export KEY_FILE='.key.txt'
